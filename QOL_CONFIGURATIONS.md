@@ -1,0 +1,3 @@
+Since I am using a laptop, I disabled lid-switch actions using ```sudo nano /etc/systemd/logind.conf``` and setting ```HandleLidSwitch=ignore``` before uncommenting it.
+
+Afterwards, I used ```sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``` to prevent Ubuntu from entering power-saving modes completely, then I restarted the service using ```sudo systemctl restart systemd-login```.
